@@ -1,0 +1,34 @@
+{
+    "version": 4,
+    "inquiries": [
+        {
+            "id": "il9Eh0FFy9qlwYzAk7Y6s",
+            "query": "select \n\tproject_id, \n    hours_spent, \n    hours_rate as rate_original, \n    sum(hours_spent * hours_rate) as project_original_cost, \n    hours_rate + 5 as rate_hike\nfrom \n\tinvoices_fact\ngroup by \n\tproject_id",
+            "viewType": "chart",
+            "viewOptions": {
+                "data": [],
+                "layout": {
+                    "autosize": true,
+                    "xaxis": {
+                        "range": [
+                            -1,
+                            6
+                        ],
+                        "autorange": true
+                    },
+                    "yaxis": {
+                        "range": [
+                            -1,
+                            4
+                        ],
+                        "autorange": true
+                    }
+                },
+                "frames": []
+            },
+            "name": "aggeration exercise",
+            "updatedAt": "2026-10-17T09:38:09.314Z",
+            "createdAt": "2026-10-17T09:38:09.314Z"
+        }
+    ]
+}

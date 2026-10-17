@@ -1,0 +1,34 @@
+{
+    "version": 4,
+    "inquiries": [
+        {
+            "id": "MvJz0COn5JPWSYZ__WLaO",
+            "query": "select \n\tj.job_id, \n    j.job_title_short as title, \n    c.name as company_name\nfrom \n\tjob_postings_fact as j \nleft join \n\tcompany_dim as c \n    on \n    \tj.company_id = c.company_id;\n        \nselect \n\tj.job_id, \n    j.job_title_short as title, \n    c.name as company_name\nfrom \n\tjob_postings_fact as j \nright join \n\tcompany_dim as c \n    on \n    \tj.company_id = c.company_id;\n        \nselect \n\tj.job_id, \n    j.job_title_short as title, \n    s.skill_id, \n    sd.skills\nfrom \n\tjob_postings_fact as j \ninner join \n\tskills_job_dim as s \n    on \n    \tj.job_id = s.job_id\ninner join \n\tskills_dim as sd\n    on \n    \ts.skill_id = sd.skill_id;\n        \nselect \n\ts.skills as skill_name, \n    count(sd.job_id) as no_of_job_posting, \n    avg(j.salary_year_avg) as avg_salary_for_skill\nfrom skills_dim as s\nleft join\n\tskills_job_dim as sd \n    on \n    \ts.skill_id = sd.skill_id\nleft join job_postings_fact as j \n\ton \n    \tsd.job_id = j.job_id\ngroup by \n\ts.skills\norder by \n\tavg_salary_for_skill desc; \n\n        \n",
+            "viewType": "chart",
+            "viewOptions": {
+                "data": [],
+                "layout": {
+                    "autosize": true,
+                    "xaxis": {
+                        "range": [
+                            -1,
+                            6
+                        ],
+                        "autorange": true
+                    },
+                    "yaxis": {
+                        "range": [
+                            -1,
+                            4
+                        ],
+                        "autorange": true
+                    }
+                },
+                "frames": []
+            },
+            "name": "join",
+            "updatedAt": "2026-10-17T10:07:41.857Z",
+            "createdAt": "2026-10-17T10:07:41.857Z"
+        }
+    ]
+}

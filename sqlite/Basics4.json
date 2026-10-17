@@ -1,0 +1,34 @@
+{
+    "version": 4,
+    "inquiries": [
+        {
+            "id": "JOJ2UTJ60RXUaKcokFhtt",
+            "query": "select \n\tjob_id, \n    job_title, \n    job_title_short, \n    job_location\nfrom \n\tjob_postings_fact\nwhere\n\tjob_title like '%Analyst%';\n    \nselect \n\tjob_id, \n    job_title, \n    job_title_short, \n    job_location\nfrom \n\tjob_postings_fact\nwhere\n\tjob_title like '%Analyst';\n    \n   select \n\tjob_id, \n    job_title, \n    job_title_short, \n    job_location\nfrom \n\tjob_postings_fact\nwhere\n\tjob_title like '%Business%Analyst%';\n    \n   select \n\tjob_id, \n    job_title, \n    job_title_short, \n    job_location\nfrom \n\tjob_postings_fact\nwhere\n\tjob_title like '%Business_Analyst%';\n    \n",
+            "viewType": "chart",
+            "viewOptions": {
+                "data": [],
+                "layout": {
+                    "autosize": true,
+                    "xaxis": {
+                        "range": [
+                            -1,
+                            6
+                        ],
+                        "autorange": true
+                    },
+                    "yaxis": {
+                        "range": [
+                            -1,
+                            4
+                        ],
+                        "autorange": true
+                    }
+                },
+                "frames": []
+            },
+            "name": "Basics4",
+            "updatedAt": "2026-10-15T09:48:41.062Z",
+            "createdAt": "2026-10-15T09:48:41.062Z"
+        }
+    ]
+}

@@ -1,0 +1,34 @@
+{
+    "version": 4,
+    "inquiries": [
+        {
+            "id": "ByZ0oNtKAhmNSx2WjuX-s",
+            "query": "select \n\tjob_title, \n    job_location as location, \n    salary_year_avg as salary\nfrom job_postings_fact\nwhere \n\t(job_title like '%Data%' or job_title like '%Business%')\n    and\n    job_title like '%Analyst%' and\n    job_title not like '%Senior%';",
+            "viewType": "chart",
+            "viewOptions": {
+                "data": [],
+                "layout": {
+                    "autosize": true,
+                    "xaxis": {
+                        "range": [
+                            -1,
+                            6
+                        ],
+                        "autorange": true
+                    },
+                    "yaxis": {
+                        "range": [
+                            -1,
+                            4
+                        ],
+                        "autorange": true
+                    }
+                },
+                "frames": []
+            },
+            "name": "basics5",
+            "updatedAt": "2026-10-15T09:56:09.283Z",
+            "createdAt": "2026-10-15T09:56:09.284Z"
+        }
+    ]
+}

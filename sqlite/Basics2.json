@@ -1,0 +1,34 @@
+{
+    "version": 4,
+    "inquiries": [
+        {
+            "id": "f9YrPf7KQrXr4x3QXFtHK",
+            "query": "select \n\tjob_title_short, \n    job_location, \n    job_via, \n    salary_year_avg\nfrom \n\tjob_postings_fact\nwhere\n\tjob_via <> 'via Ai-Jobs.net';\n    \n    \n    select \n\tjob_title_short, \n    job_location, \n    job_via, \n    salary_year_avg\nfrom \n\tjob_postings_fact\nwhere not\n\tjob_via = 'via Ai-Jobs.net';\n    \nselect \n\tjob_title_short, \n    job_location, \n    job_via, \n    salary_year_avg\nfrom \n\tjob_postings_fact\nwhere\n\tsalary_year_avg > 50000\norder by \n\tsalary_year_avg;\n    \nselect \n\tjob_title_short, \n    job_location, \n    job_via, \n    salary_year_avg\nfrom \n\tjob_postings_fact\nwhere\n\tjob_title_short = 'Data Analyst'\n    and\n\tsalary_year_avg > 100000\norder by \n\tsalary_year_avg;\n    \nselect \n\tjob_title_short, \n    job_location, \n    job_via, \n    salary_year_avg\nfrom \n\tjob_postings_fact\nwhere\n\tjob_title_short = 'Data Analyst'\n    or\n\tsalary_year_avg > 100000\norder by \n\tsalary_year_avg;\n    \nselect \n\tjob_title_short, \n    job_location, \n    job_via, \n    salary_year_avg\nfrom \n\tjob_postings_fact\nwhere\n\tjob_title_short = 'Data Analyst'\n    and\n\tsalary_year_avg between 100000 and 200000\norder by \n\tsalary_year_avg;\n    \nselect \n\tjob_title_short, \n    job_location, \n    job_via, \n    salary_year_avg\nfrom \n\tjob_postings_fact\nwhere\n\tjob_title_short = 'Data Analyst' or \n    job_title_short = 'Data Engineer';\n    \nselect \n\tjob_title_short, \n    job_location, \n    job_via, \n    salary_year_avg\nfrom \n\tjob_postings_fact\nwhere\n\tjob_title_short in ('Data Analyst', 'Data Engineer', 'Data Scientist');",
+            "viewType": "chart",
+            "viewOptions": {
+                "data": [],
+                "layout": {
+                    "autosize": true,
+                    "xaxis": {
+                        "range": [
+                            -1,
+                            6
+                        ],
+                        "autorange": true
+                    },
+                    "yaxis": {
+                        "range": [
+                            -1,
+                            4
+                        ],
+                        "autorange": true
+                    }
+                },
+                "frames": []
+            },
+            "name": "Basics2",
+            "updatedAt": "2026-10-15T09:29:39.145Z",
+            "createdAt": "2026-10-15T09:29:39.145Z"
+        }
+    ]
+}
