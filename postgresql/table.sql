@@ -50,3 +50,8 @@ alter table job_applied
 drop column contact_name;
 
 drop TABLE job_applied;
+
+select count(*) from company_dim;
+select count(*) from skills_dim;
+select count(*) from job_postings_fact;
+select count(*) from skills_job_dim;
